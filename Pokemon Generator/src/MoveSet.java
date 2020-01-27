@@ -24,39 +24,48 @@ public class MoveSet {
 		move4 = m4;
 	}
 
+	/* Method: getMove1 - returns move 1 as a String. */
 	public String getMove1() {
 		return move1;
 	}
 
+	/* Method: getMove2 - returns move 2 as a String. */
 	public String getMove2() {
 		return move2;
 	}
 
+	/* Method: getMove3 - returns move 3 as a String. */
 	public String getMove3() {
 		return move3;
 	}
 
+	/* Method: getMove4 - returns move 4 as a String. */
 	public String getMove4() {
 		return move4;
 	}
 
+	/* Method: getMoves - returns a String array with all four moves. */
 	public String[] getMoves() {
 		String[] moves = { move1, move2, move3, move4 };
 		return moves;
 	}
 
+	/* Method: setMove1 - takes in a move string and sets move1. */
 	public void setMove1(String move) {
 		move1 = move;
 	}
 
+	/* Method: setMove2 - takes in a move string and sets move2. */
 	public void setMove2(String move) {
 		move2 = move;
 	}
 
+	/* Method: setMove3 - takes in a move string and sets move3. */
 	public void setMove3(String move) {
 		move3 = move;
 	}
 
+	/* Method: setMove4 - takes in a move string and sets move4. */
 	public void setMove4(String move) {
 		move4 = move;
 	}

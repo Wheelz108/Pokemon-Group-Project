@@ -4,8 +4,8 @@
 public class EVSet extends ValueSet {
 
 	/*
-	 * This constructor throws an EVException if any of the EVs are more than 252 or
-	 * the total EVs total more than 510.
+	 * This constructor first calls the parent constructor and throws an EVException
+	 * if any of the EVs are more than 252 or the total EVs total more than 510.
 	 */
 	EVSet(int HP, int atk, int def, int spAtk, int spDef, int spd) throws EVException {
 		super(HP, atk, def, spAtk, spDef, spd);

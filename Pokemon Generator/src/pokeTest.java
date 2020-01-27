@@ -1,11 +1,12 @@
 import javax.swing.JOptionPane;
 
+// This is a test program of the PokeData class and it's member variables.
 public class pokeTest {
 
 	public static void main(String[] args) {
 		try {
 			PokeData testPokemon = new PokeData("Bulbasaur", "A thing", new IVSet(31, 31, 31, 31, 31, 31),
-					new EVSet(252, 2522, 6, 0, 0, 0), "things and stuff", true, "beautiful",
+					new EVSet(252, 252, 6, 0, 0, 0), "things and stuff", true, "beautiful",
 					new MoveSet("Fly", "Splash", "Hydro Pump", "Ice Beam"));
 			IVSet IVs = testPokemon.getIVs();
 			EVSet EVs = testPokemon.getEVs();

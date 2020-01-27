@@ -4,8 +4,8 @@
 public class IVSet extends ValueSet {
 
 	/*
-	 * This constructor throws an exception if any of the IVs are more than 31 or
-	 * less than 0
+	 * This constructor first calls in the parent constructor and throws an
+	 * exception if any of the IVs are more than 31 or less than 0
 	 */
 	IVSet(int HP, int atk, int def, int spAtk, int spDef, int spd) throws IVException {
 		super(HP, atk, def, spAtk, spDef, spd);
