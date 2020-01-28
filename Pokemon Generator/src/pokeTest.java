@@ -45,39 +45,25 @@ public class pokeTest {
 		int EVspDef = Integer.parseInt(EVspDefString);
 		int EVspd = Integer.parseInt(EVspdString);
 		try {
-			PokeData testPokemon = new PokeData(species, item, new IVSet(IVHP, IVatk, IVdef, IVspAtk, IVspDef, IVspd),
+			PokeData pokemon = new PokeData(species, item, new IVSet(IVHP, IVatk, IVdef, IVspAtk, IVspDef, IVspd),
 					new EVSet(EVHP, EVatk, EVdef, EVspAtk, EVspDef, EVspd), ability, shiny, nature,
 					new MoveSet(move1, move2, move3, move4));
-			IVSet IVs = testPokemon.getIVs();
-			EVSet EVs = testPokemon.getEVs();
-			MoveSet moves = testPokemon.getMoves();
+			IVSet IVs = pokemon.getIVs();
+			EVSet EVs = pokemon.getEVs();
+			MoveSet moves = pokemon.getMoves();
 			String pokeString = "";
-			pokeString += "Species: " + testPokemon.getSpecies() + "\n";
-			pokeString += "Item: " + testPokemon.getItem() + "\n";
-			pokeString += "IVs:\n";
-			pokeString += "* HP - " + IVs.getHP() + "\n";
-			pokeString += "* Atk - " + IVs.getAtk() + "\n";
-			pokeString += "* Def - " + IVs.getDef() + "\n";
-			pokeString += "* Sp Atk - " + IVs.getSpAtk() + "\n";
-			pokeString += "* Sp Def - " + IVs.getSpDef() + "\n";
-			pokeString += "* Spd - " + IVs.getSpd() + "\n";
-			pokeString += "EVs:\n";
-			pokeString += "* HP - " + EVs.getHP() + "\n";
-			pokeString += "* Atk - " + EVs.getAtk() + "\n";
-			pokeString += "* Def - " + EVs.getDef() + "\n";
-			pokeString += "* Sp Atk - " + EVs.getSpAtk() + "\n";
-			pokeString += "* Sp Def - " + EVs.getSpDef() + "\n";
-			pokeString += "* Spd - " + EVs.getSpd() + "\n";
-			pokeString += "Ability: " + testPokemon.getAbility() + "\n";
-			pokeString += "Shiny: " + testPokemon.getShiny() + "\n";
-			pokeString += "Nature: " + testPokemon.getNature() + "\n";
-			pokeString += "Moves:\n";
-			pokeString += "* Move 1 - " + moves.getMove1() + "\n";
-			pokeString += "* Move 2 - " + moves.getMove2() + "\n";
-			pokeString += "* Move 3 - " + moves.getMove3() + "\n";
-			pokeString += "* Move 4 - " + moves.getMove4() + "\n";
+			pokeString += pokemon.getSpecies() + " @ " + pokemon.getItem() + "\n";
+			pokeString += "IVs: " + IVs.getHP() + " / " + IVs.getAtk() + " / " + IVs.getDef() + " / " + IVs.getSpAtk() + " / " + IVs.getSpDef() + " / " + IVs.getSpd() + "\n";
+			pokeString += "EVs: " + EVs.getHP() + " / " + EVs.getAtk() + " / " + EVs.getDef() + " / " + EVs.getSpAtk() + " / " + EVs.getSpDef() + " / " + EVs.getSpd() + "\n";
+			pokeString += "Ability: " + pokemon.getAbility() + "\n";
+			pokeString += "Shiny: " + pokemon.getShiny() + "\n";
+			pokeString += pokemon.getNature() + " Nature" + "\n";
+			pokeString += "- " + moves.getMove1() + "\n";
+			pokeString += "- " + moves.getMove2() + "\n";
+			pokeString += "- " + moves.getMove3() + "\n";
+			pokeString += "- " + moves.getMove4() + "\n";
 			JOptionPane.showMessageDialog(null, pokeString);
-			IO fileOut = new IO();
+			IO fileOut = new IO(pokemon);
 			fileOut.FileOut();
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, e.getMessage());

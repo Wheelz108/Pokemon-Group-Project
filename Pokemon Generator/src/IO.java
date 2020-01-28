@@ -4,23 +4,21 @@ import javax.swing.JOptionPane;
 public class IO {
     IVSet IVs;
     EVSet EVs;
-    MoveSet moves[];
+    MoveSet moves;
+    PokeData pokemon;
 
-    public IO(PokeData testPokemon) {
-        IVs = testPokemon.getIVs();
-        EVs = testPokemon.getEVs();
-        moves = new String[4];
-        moves[0] = testPokemon.getMove1();
-        moves[1] = testPokemon.getMove2();
-        moves[2] = testPokemon.getMove3();
-        moves[3] = testPokemon.getMove4();
+    public IO(PokeData _pokemon) {
+        pokemon = _pokemon;
+        IVs = _pokemon.getIVs();
+        EVs = _pokemon.getEVs();
+        moves = _pokemon.getMoves();
     }
     public void FileOut() {
         BufferedWriter outFile = null;
         try {
             outFile = new BufferedWriter(new FileWriter("Pkmn.txt", true));
             outFile.newLine();
-            outFile.write(testPokemon.getSpecies() + "@" + testPokemon.getItem());
+            outFile.write(pokemon.getSpecies() + " @ " + pokemon.getItem());
             outFile.newLine();
             if (IVs.getHP() == 31 && IVs.getAtk() == 31 && IVs.getDef() == 31 && IVs.getSpAtk() == 31 && IVs.getSpDef() == 31 && IVs.getSpd() == 31) {
                 outFile.write("EVs: " + EVs.getHP() + " / " + EVs.getAtk() + " / " + EVs.getDef() + " / "  + EVs.getSpAtk() + " / " + EVs.getSpDef() + " / " + EVs.getSpd());
@@ -31,24 +29,24 @@ public class IO {
                 outFile.write("EVs: " + EVs.getHP() + " / " + EVs.getAtk() + " / " + EVs.getDef() + " / "  + EVs.getSpAtk() + " / " + EVs.getSpDef() + " / " + EVs.getSpd());
                 outFile.newLine();
             }
-            outFile.write("Ability: " + testPokemon.getAbility());
+            outFile.write("Ability: " + pokemon.getAbility());
             outFile.newLine();
-            if (testPokemon.getShiny() == true) {
+            if (pokemon.getShiny() == true) {
                 outFile.write("Shiny: Yes");
                 outFile.newLine();
-                outFile.write(testPokemon.getNature() + "Nature");
+                outFile.write(pokemon.getNature() + " Nature");
                 outFile.newLine();
             } else {
-                outFile.write(testPokemon.getNature() + "Nature");
+                outFile.write(pokemon.getNature() + " Nature");
                 outFile.newLine();
             }
-            outFile.write("- " + moves[0]);
+            outFile.write("- " + moves.getMove1());
             outFile.newLine();
-            outFile.write("- " + moves[1]);
+            outFile.write("- " + moves.getMove2());
             outFile.newLine();
-            outFile.write("- " + moves[3]);
+            outFile.write("- " + moves.getMove3());
             outFile.newLine();
-            outFile.write("- " + moves[3]);
+            outFile.write("- " + moves.getMove4());
             outFile.close();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
