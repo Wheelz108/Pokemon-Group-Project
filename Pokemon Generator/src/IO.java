@@ -6,10 +6,10 @@ public class IO {
     EVSet EVs = testPokemon.getEVs();
     MoveSet moves = testPokemon.getMoves();
 
-    IO(PokeData testPokemon) {
+    IO() {
         
     }
-    public void FileOut() {
+    public FileOut(PokeData testPokemon) {
         BufferedWriter outFile = null;
         try {
             outFile = new BufferedWriter(new FileWriter("Pkmn.txt", true));
