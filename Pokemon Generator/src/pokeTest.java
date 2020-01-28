@@ -82,7 +82,5 @@ public class pokeTest {
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, e.getMessage());
 		}
-
 	}
-
 }

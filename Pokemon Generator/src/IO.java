@@ -9,7 +9,7 @@ public class IO {
     IO() {
         
     }
-    public FileOut(PokeData testPokemon) {
+    public void FileOut(PokeData testPokemon) {
         BufferedWriter outFile = null;
         try {
             outFile = new BufferedWriter(new FileWriter("Pkmn.txt", true));
