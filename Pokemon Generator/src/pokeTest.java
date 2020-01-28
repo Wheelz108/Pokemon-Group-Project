@@ -78,7 +78,7 @@ public class pokeTest {
 			pokeString += "* Move 4 - " + moves.getMove4() + "\n";
 			JOptionPane.showMessageDialog(null, pokeString);
 			IO fileOut = new IO();
-			fileOut.FileOut(testPokemon);
+			fileOut.FileOut();
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, e.getMessage());
 		}

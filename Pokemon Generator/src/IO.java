@@ -2,14 +2,20 @@ import java.io.*;
 import javax.swing.JOptionPane;
 
 public class IO {
-    IVSet IVs = testPokemon.getIVs();
-    EVSet EVs = testPokemon.getEVs();
-    MoveSet moves = testPokemon.getMoves();
+    IVSet IVs;
+    EVSet EVs;
+    MoveSet moves[];
 
-    IO() {
-        
+    public IO(PokeData testPokemon) {
+        IVs = testPokemon.getIVs();
+        EVs = testPokemon.getEVs();
+        moves = new String[4];
+        moves[0] = testPokemon.getMove1();
+        moves[1] = testPokemon.getMove2();
+        moves[2] = testPokemon.getMove3();
+        moves[3] = testPokemon.getMove4();
     }
-    public void FileOut(PokeData testPokemon) {
+    public void FileOut() {
         BufferedWriter outFile = null;
         try {
             outFile = new BufferedWriter(new FileWriter("Pkmn.txt", true));
@@ -36,13 +42,13 @@ public class IO {
                 outFile.write(testPokemon.getNature() + "Nature");
                 outFile.newLine();
             }
-            outFile.write("- " + moves.getMove1());
+            outFile.write("- " + moves[0]);
             outFile.newLine();
-            outFile.write("- " + moves.getMove2());
+            outFile.write("- " + moves[1]);
             outFile.newLine();
-            outFile.write("- " + moves.getMove3());
+            outFile.write("- " + moves[3]);
             outFile.newLine();
-            outFile.write("- " + moves.getMove4());
+            outFile.write("- " + moves[3]);
             outFile.close();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
