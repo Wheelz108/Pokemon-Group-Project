@@ -24,9 +24,9 @@ public class IO {
                 outFile.write("EVs: " + EVs.getHP() + " / " + EVs.getAtk() + " / " + EVs.getDef() + " / "  + EVs.getSpAtk() + " / " + EVs.getSpDef() + " / " + EVs.getSpd());
                 outFile.newLine();
             } else {
-                outFile.write("IVs: " + IVs.getHP() + " / " + IVs.getAtk() + " / " + IVs.getDef() + " / "  + IVs.getSpAtk() + " / " + IVs.getSpDef() + " / " + IVs.getSpd());
+                outFile.write("IVs: " + IVs.getHP() + " HP / " + IVs.getAtk() + " Atk / " + IVs.getDef() + " Def / "  + IVs.getSpAtk() + " SpA / " + IVs.getSpDef() + " SpD / " + IVs.getSpd() + " Spe");
                 outFile.newLine();
-                outFile.write("EVs: " + EVs.getHP() + " / " + EVs.getAtk() + " / " + EVs.getDef() + " / "  + EVs.getSpAtk() + " / " + EVs.getSpDef() + " / " + EVs.getSpd());
+                outFile.write("EVs: " + EVs.getHP() + " HP / " + EVs.getAtk() + " Atk / " + EVs.getDef() + " Def / "  + EVs.getSpAtk() + " SpA / " + EVs.getSpDef() + " SpD / " + EVs.getSpd() + " Spe");
                 outFile.newLine();
             }
             outFile.write("Ability: " + pokemon.getAbility());

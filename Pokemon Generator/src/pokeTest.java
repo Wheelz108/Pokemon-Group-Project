@@ -53,8 +53,8 @@ public class pokeTest {
 			MoveSet moves = pokemon.getMoves();
 			String pokeString = "";
 			pokeString += pokemon.getSpecies() + " @ " + pokemon.getItem() + "\n";
-			pokeString += "IVs: " + IVs.getHP() + " / " + IVs.getAtk() + " / " + IVs.getDef() + " / " + IVs.getSpAtk() + " / " + IVs.getSpDef() + " / " + IVs.getSpd() + "\n";
-			pokeString += "EVs: " + EVs.getHP() + " / " + EVs.getAtk() + " / " + EVs.getDef() + " / " + EVs.getSpAtk() + " / " + EVs.getSpDef() + " / " + EVs.getSpd() + "\n";
+			pokeString += "IVs: " + IVs.getHP() + " HP / " + IVs.getAtk() + " Atk / " + IVs.getDef() + " Def / " + IVs.getSpAtk() + " SpA / " + IVs.getSpDef() + " SpD / " + IVs.getSpd() + " Spe" + "\n";
+			pokeString += "EVs: " + EVs.getHP() + " HP / " + EVs.getAtk() + " Atk / " + EVs.getDef() + " Def / " + EVs.getSpAtk() + " SpA / " + EVs.getSpDef() + " SpD / " + EVs.getSpd() + " Spe" + "\n";
 			pokeString += "Ability: " + pokemon.getAbility() + "\n";
 			pokeString += "Shiny: " + pokemon.getShiny() + "\n";
 			pokeString += pokemon.getNature() + " Nature" + "\n";
