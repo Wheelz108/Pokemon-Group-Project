@@ -21,7 +21,7 @@ public class IO {
             outFile.write(pokemon.getSpecies() + " @ " + pokemon.getItem());
             outFile.newLine();
             if (IVs.getHP() == 31 && IVs.getAtk() == 31 && IVs.getDef() == 31 && IVs.getSpAtk() == 31 && IVs.getSpDef() == 31 && IVs.getSpd() == 31) {
-                outFile.write("EVs: " + EVs.getHP() + " / " + EVs.getAtk() + " / " + EVs.getDef() + " / "  + EVs.getSpAtk() + " / " + EVs.getSpDef() + " / " + EVs.getSpd());
+                outFile.write("EVs: " + EVs.getHP() + " HP / " + EVs.getAtk() + " Atk / " + EVs.getDef() + " Def / "  + EVs.getSpAtk() + " SpA / " + EVs.getSpDef() + " SpD / " + EVs.getSpd() + " Spe");
                 outFile.newLine();
             } else {
                 outFile.write("IVs: " + IVs.getHP() + " HP / " + IVs.getAtk() + " Atk / " + IVs.getDef() + " Def / "  + IVs.getSpAtk() + " SpA / " + IVs.getSpDef() + " SpD / " + IVs.getSpd() + " Spe");
